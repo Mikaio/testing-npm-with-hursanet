@@ -15,7 +15,7 @@ jobs:
         SECRET_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       run: |
         echo "$SECRET_KEY" > github-actions-ssh-key
-        chmod 0600 github-actions-ssh-key
+        chmod 400 github-actions-ssh-key
     
     - name: Copy backup.tgz file from remote server to the GitHub runner
       run: >
